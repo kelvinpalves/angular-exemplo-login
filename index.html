@@ -2,7 +2,7 @@
 <html ng-app="app" ng-strict>
 <head>
 	<meta charset="utf-8">
-	<title>Exemplo JWT + AngularJS</title>
+	<title>Angular Exemplo Login</title>
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
@@ -19,10 +19,15 @@
 	<script type="text/javascript" src="src/app/app.module.js"></script>
 	<script type="text/javascript" src="src/app/config.route.js"></script>
 	<script type="text/javascript" src="src/app/core/core.module.js"></script>
-	<script type="text/javascript" src="src/app/core/auth-interceptor.js"></script>
-	<script type="text/javascript" src="src/app/core/auth-service.js"></script>
-	<script type="text/javascript" src="src/app/core/auth-token.js"></script>
 	<!-- fim core -->
+
+	<!-- auth -->
+	<script type="text/javascript" src="src/app/core/auth/auth.module.js"></script>
+	<script type="text/javascript" src="src/app/core/auth/auth-interceptor.js"></script>
+	<script type="text/javascript" src="src/app/core/auth/auth-service.js"></script>
+	<script type="text/javascript" src="src/app/core/auth/auth-token.js"></script>
+	<!-- fim auth -->
+	
 
 	<!-- login -->
 	<script type="text/javascript" src="src/app/login/login.module.js"></script>

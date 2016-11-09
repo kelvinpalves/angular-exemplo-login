@@ -7,6 +7,7 @@
 
 	AuthToken.$inject = ['$sessionStorage'];
 
+	/* @ngInject */
 	function AuthToken($sessionStorage) {
 		var service = {
 			deleteToken: deleteToken,
