@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-strict>
+<head>
+	<meta charset="utf-8">
+	<title>Exemplo JWT + AngularJS</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div ng-view class="container"></div>
+
+	<!-- vendor -->
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="bower_components/ngstorage/ngStorage.min.js"></script>
+	<!-- fim vendor -->
+
+	<!-- core -->
+	<script type="text/javascript" src="src/app/app.module.js"></script>
+	<script type="text/javascript" src="src/app/config.route.js"></script>
+	<script type="text/javascript" src="src/app/core/core.module.js"></script>
+	<script type="text/javascript" src="src/app/core/auth-interceptor.js"></script>
+	<script type="text/javascript" src="src/app/core/auth-service.js"></script>
+	<script type="text/javascript" src="src/app/core/auth-token.js"></script>
+	<!-- fim core -->
+
+	<!-- login -->
+	<script type="text/javascript" src="src/app/login/login.module.js"></script>
+	<script type="text/javascript" src="src/app/login/login.js"></script>
+	<!-- fim login -->
+
+	<!-- home -->
+	<script type="text/javascript" src="src/app/home/home.module.js"></script>
+	<script type="text/javascript" src="src/app/home/home.js"></script>
+	<script type="text/javascript" src="src/app/home/dataservice.js"></script>
+	<!-- fim home -->
+</body>
+</html>
