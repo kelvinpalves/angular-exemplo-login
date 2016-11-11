@@ -11,7 +11,7 @@ Uma das verificações é feita através de um interceptor HTTP, ou seja, toda e
 No interceptor, vai ter também o tratamento do HTTP Response, sendo possível tratar os códigos de retorno 401 e 403.
 
 A outra verificação será efetuada nas rotas da aplicação, através da propriedade "notSecured".
-Caso a rota não esteja assinada como não segura, a presença do Token será verificada e em caso de ausência redirecionada para a view de login.
+Caso a rota esteja assinada como não segura, a presença do Token será verificada e em caso de ausência redirecionada para a view de login.
 
 Abaixo dois fluxos para exemplificar os dois tipos de verificação:
 
