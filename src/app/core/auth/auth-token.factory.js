@@ -18,16 +18,16 @@
 		return service;
 		//////////////
 
-		function deleteToken() {
-			delete $sessionStorage.token;
+		function deleteToken(id) {
+			delete $sessionStorage[id];
 		}
 
-		function getToken() {
-			return $sessionStorage.token;			
+		function getToken(id) {
+			return $sessionStorage[id];			
 		}
 
-		function setToken(token) {
-			return $sessionStorage.token = token;
+		function setToken(token, id) {
+			return $sessionStorage[id] = token;
 		}
 	}
 })();	
