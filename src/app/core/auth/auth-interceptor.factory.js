@@ -20,14 +20,15 @@
 
 		function request(config) {
 			config.headers = config.headers || {};
-			if (AuthToken.getToken()) {
-				config.headers['Authorization'] = 'Bearer ' + AuthToken.getToken();
+			if (AuthToken.getToken('accessToken')) {
+				config.headers['Authorization'] = 'Bearer ' + AuthToken.getToken('accessToken');
 			}
 			return config;
 		}
 
 		function responseError(response) {
 			if (response.status === 401 || response.status === 403) {
+				alert(response.data)
 				$location.path('/login');
 			}
 			return $q.reject(response);

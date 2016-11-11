@@ -11,8 +11,10 @@
 	function Home(AuthService, AuthToken, dataservice) {
 		var vm = this;
 		vm.logout = logout;
-		vm.token = AuthToken.getToken();
+		vm.token = AuthToken.getToken('accessToken');
 		vm.teste = teste;
+
+		console.log(vm.token);
 		/////////////////
 
 		function logout() {

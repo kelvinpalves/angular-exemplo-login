@@ -3,12 +3,14 @@
 		.module('app.home')
 		.factory('dataservice', dataservice);
 
-	dataservice.$inject = ['$http'];
+	dataservice.$inject = ['$http', '$sessionStorage'];
 
-	function dataservice($http) {
+	function dataservice($http, $sessionStorage) {
 		var service = {
 			buscarClientes: buscarClientes
 		};
+
+		console.log($sessionStorage);
 
 		return service;
 		///////////////

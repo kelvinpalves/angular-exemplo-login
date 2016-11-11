@@ -18,14 +18,14 @@
 		///////////////
 
 		function logout() {
-			AuthToken.deleteToken();
+			AuthToken.deleteToken('accessToken');
 			$location.path('/login');
 		}
 
 		function sigin(data) {
-			$http.post('http://10.2.0.44:8085/tickets-1.0/rs/auth', data)
+			$http.post('http://10.2.0.43/ce-api/login.php', data)
 				.then(function (data) {
-					AuthToken.setToken(data.data.token);
+					AuthToken.setToken(data.data.token, 'accessToken');
 					$location.path('/');
 				});
 		}

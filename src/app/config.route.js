@@ -13,7 +13,7 @@
 
 		function routeChangeStart(event, next, current) {
 			if (!next.notSecured) {
-				if (!AuthToken.getToken()) {
+				if (!AuthToken.getToken('accessToken')) {
 					$rootScope.$evalAsync(function () {
 						$location.path('/login');
 					});
