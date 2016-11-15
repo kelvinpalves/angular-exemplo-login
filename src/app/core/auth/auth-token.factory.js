@@ -27,7 +27,7 @@
 		}
 
 		function setToken(token, id) {
-			return $sessionStorage[id] = token;
+			$sessionStorage[id] = token;
 		}
 	}
 })();	
